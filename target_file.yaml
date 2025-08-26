@@ -1,0 +1,50 @@
+# Helm Chart 來源配置
+namespace: pod-manager
+
+source:
+  chartType: "local"
+  description: "GPM Portal 本地部署配置"
+  chartPath: "components/gpm-portal/chart"
+  deploytool_enabled: true
+
+app:
+  repository: cr.myelintek.com/myelintek/gigapass-go
+  digest: sha256:8e8b0f29aca70fbfb1082f84e4d8477d1411423259762a8de85f216f71cc1566
+  imagePullPolicy: IfNotPresent
+  imagePullSecrets:
+    - harbor-pull-secret
+  env:
+    DB_HOST: postgres
+    DB_PORT: 5432
+    DB_USER: postgres
+    DB_PASSWORD: P@ssw0rd
+    DB_NAME: postgres
+    INFRASTRUCTURE_MAAS_IP:
+    HOST_VM_IP:
+  staticAsset:
+    enabled: true
+    endpoint: "https://s3.myelintek.com"
+    bucket: "podmanager-builds"
+    key: "builds/3/merge/20250815-090528-build-9/podmanager-ui-hash-7020ad6e3a01644da86ec28001c7a7ce843c1934.tar.gz"
+    mountPath: "/app/static"
+    extract: true
+    secret:
+      name: "minio-cred" # 留空就會用 <release>-minio-cred
+  volumeMounts:
+    - name: static-vol
+      mountPath: /app/static
+      readOnly: true
+  volumes:
+    - name: static-vol
+      type: emptyDir
+
+postgres:
+  image:
+    repository: postgres
+    tag: "15"
+  auth:
+    user: postgres
+    password: P@ssw0rd
+    database: postgres
+  persistence:
+    size: 1Gi
