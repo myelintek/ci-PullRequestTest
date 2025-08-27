@@ -25,7 +25,7 @@ app:
     enabled: true
     endpoint: "https://s3.myelintek.com"
     bucket: "podmanager-builds"
-    key: "builds/3/merge/20250815-090528-build-9/podmanager-ui-hash-7020ad6e3a01644da86ec28001c7a7ce843c1934.tar.gz"
+    key: "frontend/podmanager-ui-history-906e7fe.tar.gz"
     mountPath: "/app/static"
     extract: true
     secret:
