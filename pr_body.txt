@@ -1,0 +1,42 @@
+## Auto-generated PR: Update Frontend Commit Hash
+
+This PR automatically updates the podmanager frontend commit hash in the configuration file.
+
+### 📋 Latest Changes
+**Updated `staticAsset.key` to:** `frontend/podmanager-ui-history-b9c7ede.tar.gz`
+
+### 🔄 Update History
+
+#### 🕐 2025-08-27 02:53:45 +0000
+**Source:** PR #5
+**Link:** https://github.com/myelintek/podmanager-go-frontend/pull/5
+**Commit:** [`b9c7ede`](https://github.com/myelintek/podmanager-go-frontend/commit/b9c7edeb5cc034cb9365a1fe33be0ef7fbd28a65)
+**Message:** Merge 5b66f0415ce336019a05a96c7871e44e6d65000d into 29950bb91fe9198f2e4508bf0a212f4997750601
+**Author:** Jeromie
+**Hash:** `frontend/podmanager-ui-history-b9c7ede.tar.gz`
+
+---
+
+#### 🕐 2025-08-27 02:40:38 +0000
+**Source:** PR #5
+**Link:** https://github.com/myelintek/podmanager-go-frontend/pull/5
+**Commit:** [`7b3a502`](https://github.com/myelintek/podmanager-go-frontend/commit/7b3a502fdce798e969ea07549f2e8e3386a2260c)
+**Message:** Merge d8a08bc8d1177619b13928114433e0db9bc18bd7 into 29950bb91fe9198f2e4508bf0a212f4997750601
+**Author:** Jeromie
+**Hash:** `frontend/podmanager-ui-history-7b3a502.tar.gz`
+
+---
+
+### 📊 Workflow Information
+- **Source Repository:** [myelintek/podmanager-go-frontend](https://github.com/myelintek/podmanager-go-frontend)
+- **Target Repository:** [myelintek/ci-PullRequestTest](https://github.com/myelintek/ci-PullRequestTest)
+- **Triggered by:** pull_request on branch `5/merge`
+- **Workflow Run:** [#44](https://github.com/myelintek/podmanager-go-frontend/actions/runs/17255994051)
+- **File Updated:** `target_file.yaml` → `staticAsset.key`
+
+### 🔧 Technical Details
+- Branch: `frontend-auto-update`
+- This PR uses a fixed branch name to accumulate multiple updates
+- Each new commit from the source repository will add a new entry to the update history above
+
+> 🤖 This PR is automatically managed. New commits from the source repository will update this PR description and add new changes.
